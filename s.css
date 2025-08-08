@@ -233,10 +233,7 @@ button.tachado {
   }
 
 /* pagina en general*/
-html, body {
-  height: 100%;
-  overflow-y: auto;
-}
+
 
 #orientacionesSection {
   padding-bottom: 100px; /* ajustá según la altura del footer */
@@ -246,18 +243,36 @@ html, body {
   background-color: #f67a07;
   cursor: not-allowed;
 }
-
-body {
-  padding-left: 20px;
-  padding-right: 20px;
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0; /* evita scroll lateral raro en móviles */
 }
 
+body {
+  padding-left: 10px; /* menos margen en celular */
+  padding-right: 10px;
+  font-size: 14px; /* texto más cómodo para pantallas chicas */
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+  }
+}
+
+/* Escritorios */
 @media (min-width: 1200px) {
   body {
     padding-left: 80px;
     padding-right: 80px;
+    font-size: 18px;
   }
 }
+
 
 
 
