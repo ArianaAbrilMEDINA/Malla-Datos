@@ -242,3 +242,9 @@ html, body {
   padding-bottom: 100px; /* ajustá según la altura del footer */
 }
 
+.btn-materia-1 {
+  background-color: #f67a07;
+  cursor: not-allowed;
+}
+
+
