@@ -1,0 +1,244 @@
+
+.career-tag {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.8rem;
+  font-family: 'Outfit', sans-serif;
+  background-color: #692554;
+  color: #ffffff;
+  border: 2px solid #541d42; /* Borde dorado */
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+  .accordion-button {
+    background-color: #692554;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 12px;
+  }
+
+  .accordion-button.custom-rounded {
+  background-color: #e0f7fa;
+  border-radius: 22px;
+  padding: 8px 16px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+  .accordion-button:not(.collapsed) {
+    background-color: #4A1C3A;
+    color: #ffffff;
+  }
+
+  .accordion-item {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .accordion-body {
+    background-color: #F3EAF2;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .btn-outline-primary {
+    border-color: #692554;
+    color: #692554;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #692554;
+    color: #ffffff;
+  }
+
+.career-tag-1 {
+  background-color: #C2E5FF;
+  color: #80c6fc;
+  border: 2px solid #80c6fc; /* Borde dorado */
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  font-size: 1.3rem;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+button.tachado {
+  text-decoration: line-through !important;
+  opacity: 0.6;
+  color: #555 !important;
+}
+
+.materias-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre columnas */
+  margin-bottom: 3rem;
+}
+
+.materia-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.materia-btn {
+  width: 480px;
+  background-color: #21348a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+/*aca es el encabezado del ciclo general */
+
+.career-tag-cb {
+  background-color: #2D6761;
+  color: #ffffff;
+ /* border: 2px solid #80c6fc;  Borde dorado */
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  font-size: 1.3rem;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.materias-fijas-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.materia-fija-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.materia-fija-btn {
+  width: 540px;
+  background-color: #316137;
+  color: #ffffff;
+  border: 2px solid #28522e;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* SUBCOLUMNAS*/
+
+.materia-subcols {
+  display: flex;
+  gap: 2rem;
+}
+
+.materia-subcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.materia-fija-subbtn-titulo {
+  width: 220px;
+  background-color: #F24822;
+  color: #fff;
+  border: 2px solid #f12f03 ;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.materia-fija-subbtn {
+  width: 220px;
+  background-color: #FF9E42;
+  color: #000;
+  border: 2px solid #f67a07 ;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.materia-fija-subbtnlic {
+  width: 220px;
+  background-color: #874FFF;
+  color: #000;
+  border: 2px solid #4a1ea8;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+/*orientaciones*/
+.tachado {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transform: scale(0.97);
+}
+
+.btn-materia.disabled {
+  background-color: #f67a07 !important;
+  cursor: not-allowed;
+}
+
+
+.sub{
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+}
+
+.btn-materia-1.disabled {
+  background-color: #4a1ea8 !important;
+  cursor: not-allowed;
+}
+
+
+.materia-fija-subbtn-ori {
+  width: 300px;
+  background-color: #FF9E42;
+  color: #000;
+  border: 2px solid #f67a07 ;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+/*PIE DE PAGINA*/
+  .tachado {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+/* pagina en general*/
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#orientacionesSection {
+  padding-bottom: 100px; /* ajustá según la altura del footer */
+}
+
