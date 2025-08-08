@@ -273,6 +273,21 @@ body {
   }
 }
 
+.btn-anio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* color ejemplo */
+  color: white;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .btn-anio {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 
 
 
