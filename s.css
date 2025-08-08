@@ -250,44 +250,16 @@ html, body {
 }
 
 body {
-  padding-left: 10px; /* menos margen en celular */
-  padding-right: 10px;
-  font-size: 14px; /* texto más cómodo para pantallas chicas */
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
-/* Tablets */
-@media (min-width: 768px) {
-  body {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 16px;
-  }
-}
-
-/* Escritorios */
 @media (min-width: 1200px) {
   body {
     padding-left: 80px;
     padding-right: 80px;
-    font-size: 18px;
+
   }
-}
-
-.btn-anio {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff; /* color ejemplo */
-  color: white;
-  border-radius: 6px;
-}
-
-@media (max-width: 768px) {
-  .btn-anio {
-    display: block;
-    width: 90%;
-    box-sizing: border-box;
-  }
-}
-
 
 
