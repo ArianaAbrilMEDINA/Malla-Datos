@@ -43,55 +43,55 @@
 <div id="materiasFijasContainer" class="mt-4">
   <div class="row justify-content-center">
 
-    <!-- Primer Año -->
-    <div class="col-12 col-md-4 mb-4">
-      <div class="materia-fija-btn mb-3 text-center fw-bold">Primer Año</div>
-      <div class="row">
-        <div class="col-12 col-sm-6 text-center">
-          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alge1">Álgebra I</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="ip">Intr. a la Programación</button>
-        </div>
-        <div class="col-12 col-sm-6 text-center">
-          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis1">Análisis I</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="algo2">Algoritmos y Estructuras de Datos II</button>
-        </div>
-      </div>
+  <!-- Primer Año -->
+<div class="materia-fija-col">
+  <div class="materia-fija-btn mb-3 text-center fw-bold btn-anio">Primer Año</div>
+  <div class="materia-subcols d-flex justify-content-center">
+    <div class="materia-subcol me-2">
+      <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
+      <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alge1" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Álgebra I</button>
+      <button class="materia-fija-subbtn mb-2 btn-materia" data-id="ip" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Intr. a la Programación</button>
     </div>
+    <div class="materia-subcol ms-2">
+      <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
+      <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis1" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Análisis I</button>
+      <button class="materia-fija-subbtn mb-2 btn-materia" data-id="algo2" data-depends-on="ip,alge1">Algoritmos y Estructuras de Datos II</button>
+    </div>
+  </div>
+</div>
+
 
     <!-- Segundo Año -->
-    <div class="col-12 col-md-4 mb-4">
-      <div class="materia-fija-btn mb-3 text-center fw-bold">Segundo Año</div>
-      <div class="row">
-        <div class="col-12 col-sm-6 text-center">
-          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="labo">Laboratorio de Datos</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis2">Análisis II</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alc">Álgebra Lineal Computacional</button>
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold btn-anio">Segundo Año</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold ">Primer Cuatrimestre</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="labo" data-depends-on="ip">Laboratorio de Datos</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis2" data-depends-on="analisis1">Análisis II</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alc" data-depends-on="alge1,algo2">Álgebra Lineal Computacional</button>
         </div>
-        <div class="col-12 col-sm-6 text-center">
+        <div class="materia-subcol ms-2">
           <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
-          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="electivaNat">Electiva de Naturales</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="analisisAv">Análisis Avanzado</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="electivaNat" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Electiva de Naturales</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="analisisAv" data-depends-on="analisis2,alge1">Análisis Avanzado</button>
         </div>
       </div>
     </div>
 
-    <!-- Tercer Año -->
-    <div class="col-12 col-md-4 mb-4">
-      <div class="materia-fija-btn mb-3 text-center fw-bold">Tercer Año</div>
-      <div class="row">
-        <div class="col-12 col-sm-6 text-center">
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold btn-anio">Tercer Año</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
           <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="algo3">Algoritmos y Estructuras de Datos III</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="probabilidad">Probabilidad</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="algo3" data-depends-on="algo2">Algoritmos y Estructuras de Datos III</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="probabilidad" data-depends-on="analisisAv">Probabilidad</button>
         </div>
-        <div class="col-12 col-sm-6 text-center">
+        <div class="materia-subcol ms-2">
           <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="modeladoCont">Intr. al Modelado Continuo</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="ioo">Intr. a la Investigación Operativa y Optimización</button>
-          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="estadisticaCD">Intr. a la Estadística y Ciencia de Datos</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="modeladoCont" data-depends-on="algo3,analisis2,alc">Intr. al Modelado Continuo</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="ioo" data-depends-on="algo3,analisis2,alc">Intr. a la Investigación Operativa y Optimización</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-lic" data-id="estadisticaCD" data-depends-on="analisisAv,alc">Intr. a la Estadística y Ciencia de Datos</button>
         </div>
       </div>
     </div>
