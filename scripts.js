@@ -39,10 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.remove("disabled");
       });
 
-      if (!yaMostrado) {
-        mostrarFelicidades?.();
-        localStorage.setItem("felicidadesMostrado", "true");
-      }
     } else {
       document.getElementById("orientacionesSection").style.display = "none";
       localStorage.removeItem("felicidadesMostrado");
