@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Desbloquear orientaciones si TODAS las obligatorias están completas
     const obligatorias = document.querySelectorAll(".btn-materia.obligatoria");
-        const todasObligatoriasOK = Array.from(obligatorias).every(btn => btn.classList.contains("tachado"));
+    const todasObligatoriasOK = Array.from(obligatorias).every(btn => btn.classList.contains("tachado"));
 const yaMostrado = localStorage.getItem("felicidadesMostrado") === "true";
 
 if (todasObligatoriasOK) {
@@ -58,6 +58,7 @@ if (todasObligatoriasOK) {
     btn.classList.add("disabled");
   });
 }
+
   }
 
   // Función para actualizar barra de progreso
@@ -70,6 +71,8 @@ if (todasObligatoriasOK) {
     barra.style.width = `${porcentaje}%`;
     barra.textContent = `${porcentaje}%`;
   }
+
+  // Mostrar cartel de "Felicidades"
 
   // Inicialización: restaurar estado y aplicar dependencias
   allButtons.forEach(button => {
