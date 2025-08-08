@@ -247,4 +247,17 @@ html, body {
   cursor: not-allowed;
 }
 
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+
 
