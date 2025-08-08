@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Seleccionamos TODOS los botones de materias
-  const allButtons = document.querySelectorAll(".btn-materia, .btn-materia-1");
+  const allButtons = document.querySelectorAll(".btn-materia, .btn-materia-lic");
   const orientaciones = document.querySelectorAll(".btn-orientacion"); // botones de orientaciones
 
   // Función para actualizar desbloqueos según dependencias
