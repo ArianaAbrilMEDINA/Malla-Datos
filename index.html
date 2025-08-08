@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ciencia de Datos</title>
+  <link rel="stylesheet" href="s.css">
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="career-tag">
+  Ciencia de Datos
+</div>
+
+<button id="toggleMaterias" class="career-tag-1 text-center" style="cursor: pointer; width: 100%;">
+  CICLO BÁSICO COMÚN
+</button>
+
+<div id="materiasContainer" style="display: none; margin-top: 1rem;">
+ <div class="materias-wrapper d-flex justify-content-center">
+  <div class="materia-col">
+    <button class="materia-btn mb-2 btn-materia" data-id="icse">ICSE</button>
+    <button class="materia-btn mb-2 btn-materia" data-id="ipc">IPC</button>
+    <button class="materia-btn mb-2 btn-materia" data-id="algebraA">Álgebra A</button>
+  </div>
+  <div class="materia-col ms-3">
+    <button class="materia-btn mb-2 btn-materia" data-id="analisisA">Análisis Matemático A</button>
+    <button class="materia-btn mb-2 btn-materia" data-id="fisica">Física</button>
+    <button class="materia-btn mb-2 btn-materia" data-id="quimica">Química</button>
+  </div>
+</div>
+</div>
+
+<div class="career-tag-cb">
+  Segundo Ciclo
+</div> 
+
+<div id="materiasFijasContainer" style="margin-top: 2rem;">
+  <div class="materias-fijas-wrapper d-flex justify-content-center">
+
+    <!-- Primer Año -->
+    <div class="materia-fija-col">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Primer Año</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alge1" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Álgebra I</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="ip" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Intr. a la Programación</button>
+        </div>
+        <div class="materia-subcol ms-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis1" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Análisis I</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="algo2" data-depends-on="ip,alge1">Algoritmos y Estructuras de Datos II</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segundo Año -->
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Segundo Año</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold ">Primer Cuatrimestre</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="labo" data-depends-on="ip">Laboratorio de Datos</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="analisis2" data-depends-on="analisis1">Análisis II</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="alc" data-depends-on="alge1,algo2">Álgebra Lineal Computacional</button>
+        </div>
+        <div class="materia-subcol ms-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
+          <button class="materia-fija-subbtn mb-2 btn-materia" data-id="electivaNat" data-depends-on="fisica,quimica,analisisA,icse,ipc,algebraA">Electiva de Naturales</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="analisisAv" data-depends-on="analisis2,alge1">Análisis Avanzado</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Tercer Año</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Primer Cuatrimestre</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="algo3" data-depends-on="algo2">Algoritmos y Estructuras de Datos III</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="probabilidad" data-depends-on="analisisAv">Probabilidad</button>
+        </div>
+        <div class="materia-subcol ms-2">
+          <button class="materia-fija-subbtn-titulo mb-2 fw-bold">Segundo Cuatrimestre</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="modeladoCont" data-depends-on="algo3,analisis2,alc">Intr. al Modelado Continuo</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="ioo" data-depends-on="algo3,analisis2,alc">Intr. a la Investigación Operativa y Optimización</button>
+          <button class="materia-fija-subbtnlic mb-2 btn-materia-1" data-id="estadisticaCD" data-depends-on="analisisAv,alc">Intr. a la Estadística y Ciencia de Datos</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="orientacionesSection" style="display: none; margin-top: 2rem;">
+  <div class="career-tag-cb">Tercer Ciclo</div> 
+  <p class="sub">Al completar el ciclo general, podrás elegir entre estas orientaciones sugeridas:</p>
+  <div id="materiasFijasContainer" style="margin-top: 2rem;">
+  <div class="materias-fijas-wrapper d-flex justify-content-center">
+    <div class="materia-fija-col">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Bioinformática</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol ms-2">
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Intr. a la bioinformática molecular</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Bioinformática orientada a la genómica de patógenos</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Bioinformática orientada al diseño de fármacos</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Bioinformática orientada a la genómica clínica</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Bioinformática avanzada</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Redes complejas con aplicación a sistemas biológicos</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Cs. Económicas</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol me-2">
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Econometría I</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Econometría II</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Economía Internacional</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Crecimiento Económico</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Desarrollo Económico</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Evaluación de Proyectos</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-fija-col ms-3">
+      <div class="materia-fija-btn mb-3 text-center fw-bold">Cs. Sociales</div>
+      <div class="materia-subcols d-flex justify-content-center">
+        <div class="materia-subcol ms-2">
+          <!-- Materias generales -->
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Herramientas de visualización de datos</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Análisis multivariado</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Modelo lineal/generalizado</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Teoría de juegos</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Sistemas complejos y teoría de redes</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Simulación de eventos discretos</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Muestreo</button>
+
+          <!-- Cursos con participación en proyectos de investigación -->
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Seminario de investigación: estructura y movilidad social</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Taller de investigación de sociología histórica de América Latina</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Seminario “El sistema de campos de concentración en Argentina: aportes a los procesos de juzgamiento de crímenes de Estado”</button>
+          <button class="materia-fija-subbtn-ori mb-2 btn-materia-1">Las ciencias como objeto de estudio sociológico</button>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<footer class="bg-light text-center py-3 mt-5">
+  <div class="container">
+    <div id="barraProgreso" class="progress" style="height: 25px;">
+      <div id="progresoInterno" class="progress-bar bg-success" role="progressbar" style="width: 0%;">
+        0%
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
