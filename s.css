@@ -206,6 +206,11 @@ button.tachado {
   cursor: not-allowed;
 }
 
+.btn-materia-1 {
+  background-color: #f67a07;
+  cursor: not-allowed;
+}
+
 
 .materia-fija-subbtn-ori {
   width: 300px;
@@ -233,21 +238,20 @@ button.tachado {
   }
 
 /* pagina en general*/
-
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
 
 #orientacionesSection {
-  padding-bottom: 100px; /* ajustá según la altura del footer */
+  padding-bottom: 100px; 
 }
 
 .btn-materia-1 {
   background-color: #f67a07;
   cursor: not-allowed;
 }
-html, body {
-  height: 100%;
-  overflow-y: auto;
-  margin: 0; /* evita scroll lateral raro en móviles */
-}
+
 
 body {
   padding-left: 20px;
@@ -261,5 +265,7 @@ body {
     padding-right: 80px;
 
   }
+}
+
 
 
