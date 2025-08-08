@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     materiasCBC.style.display = materiasCBC.style.display === "none" ? "block" : "none";
   });
 
-  // Seleccionamos TODOS los botones de materias
-  const allButtons = document.querySelectorAll(".btn-materia, .btn-materia-lic");
+  // Seleccionamos TODOS los botones de materias que tengan data-id
+  const allButtons = document.querySelectorAll("[data-id]");
   const orientaciones = document.querySelectorAll(".btn-orientacion"); // botones de orientaciones
 
   // Función para actualizar desbloqueos según dependencias
@@ -30,35 +30,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Desbloquear orientaciones si TODAS las obligatorias están completas
     const obligatorias = document.querySelectorAll(".btn-materia.obligatoria");
     const todasObligatoriasOK = Array.from(obligatorias).every(btn => btn.classList.contains("tachado"));
-const yaMostrado = localStorage.getItem("felicidadesMostrado") === "true";
+    const yaMostrado = localStorage.getItem("felicidadesMostrado") === "true";
 
-if (todasObligatoriasOK) {
-  // Mostrar la sección de orientaciones SIEMPRE
-  document.getElementById("orientacionesSection").style.display = "block";
+    if (todasObligatoriasOK) {
+      document.getElementById("orientacionesSection").style.display = "block";
+      orientaciones.forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove("disabled");
+      });
 
-  // Activar botones de orientación
-  orientaciones.forEach(btn => {
-    btn.disabled = false;
-    btn.classList.remove("disabled");
-  });
+      if (!yaMostrado) {
+        mostrarFelicidades?.();
+        localStorage.setItem("felicidadesMostrado", "true");
+      }
+    } else {
+      document.getElementById("orientacionesSection").style.display = "none";
+      localStorage.removeItem("felicidadesMostrado");
 
-  // Mostrar cartel solo si no se mostró antes
-  if (!yaMostrado) {
-    mostrarFelicidades();
-    localStorage.setItem("felicidadesMostrado", "true");
-  }
-} else {
-  // Ocultar sección si se desmarcan obligatorias
-  document.getElementById("orientacionesSection").style.display = "none";
-  localStorage.removeItem("felicidadesMostrado");
-
-  // Desactivar botones de orientación
-  orientaciones.forEach(btn => {
-    btn.disabled = true;
-    btn.classList.add("disabled");
-  });
-}
-
+      orientaciones.forEach(btn => {
+        btn.disabled = true;
+        btn.classList.add("disabled");
+      });
+    }
   }
 
   // Función para actualizar barra de progreso
@@ -71,8 +64,6 @@ if (todasObligatoriasOK) {
     barra.style.width = `${porcentaje}%`;
     barra.textContent = `${porcentaje}%`;
   }
-
-  // Mostrar cartel de "Felicidades"
 
   // Inicialización: restaurar estado y aplicar dependencias
   allButtons.forEach(button => {
@@ -108,4 +99,5 @@ if (todasObligatoriasOK) {
   actualizarDesbloqueos();
   actualizarProgreso();
 });
+
  
