@@ -201,7 +201,7 @@ button.tachado {
   text-align: center;
 }
 
-.btn-materia-1.disabled {
+.btn-materia-lic.disabled {
   background-color: #4a1ea8 !important;
   cursor: not-allowed;
 }
