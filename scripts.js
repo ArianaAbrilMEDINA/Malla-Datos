@@ -29,14 +29,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Desbloquear orientaciones si TODAS las obligatorias están completas
     const obligatorias = document.querySelectorAll(".btn-materia.obligatoria");
-    const todasObligatoriasOK = Array.from(obligatorias).every(btn => btn.classList.contains("tachado"));
-    if (todasObligatoriasOK) {
-      orientaciones.forEach(btn => {
-        btn.disabled = false;
-        btn.classList.remove("disabled");
-      });
-      mostrarFelicidades();
-    }
+        const todasObligatoriasOK = Array.from(obligatorias).every(btn => btn.classList.contains("tachado"));
+const yaMostrado = localStorage.getItem("felicidadesMostrado") === "true";
+
+if (todasObligatoriasOK) {
+  // Mostrar la sección de orientaciones SIEMPRE
+  document.getElementById("orientacionesSection").style.display = "block";
+
+  // Activar botones de orientación
+  orientaciones.forEach(btn => {
+    btn.disabled = false;
+    btn.classList.remove("disabled");
+  });
+
+  // Mostrar cartel solo si no se mostró antes
+  if (!yaMostrado) {
+    mostrarFelicidades();
+    localStorage.setItem("felicidadesMostrado", "true");
+  }
+} else {
+  // Ocultar sección si se desmarcan obligatorias
+  document.getElementById("orientacionesSection").style.display = "none";
+  localStorage.removeItem("felicidadesMostrado");
+
+  // Desactivar botones de orientación
+  orientaciones.forEach(btn => {
+    btn.disabled = true;
+    btn.classList.add("disabled");
+  });
+}
   }
 
   // Función para actualizar barra de progreso
@@ -49,31 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     barra.style.width = `${porcentaje}%`;
     barra.textContent = `${porcentaje}%`;
   }
-
-  // Mostrar cartel de "Felicidades"
-function mostrarFelicidades() {
-  // Mostrar la sección de orientaciones
-  document.getElementById("orientacionesSection").style.display = "block";
-
-  // Mostrar el cartel de felicitaciones si no existe
-  if (!document.getElementById("felicidadesCartel")) {
-    const cartel = document.createElement("div");
-    cartel.id = "felicidadesCartel";
-    cartel.textContent = "🎉 ¡Felicidades! Has completado todas las materias obligatorias.";
-    cartel.style.position = "fixed";
-    cartel.style.top = "20px";
-    cartel.style.left = "50%";
-    cartel.style.transform = "translateX(-50%)";
-    cartel.style.background = "#4CAF50";
-    cartel.style.color = "white";
-    cartel.style.padding = "10px 20px";
-    cartel.style.borderRadius = "10px";
-    cartel.style.zIndex = "9999";
-    document.body.appendChild(cartel);
-    setTimeout(() => cartel.remove(), 4000);
-  }
-}
-
 
   // Inicialización: restaurar estado y aplicar dependencias
   allButtons.forEach(button => {
